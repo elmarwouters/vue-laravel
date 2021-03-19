@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "scripts": {
+        "webpack": "export NODE_ENV=development webpack",
+        "dev": "export NODE_ENV=development webpack --watch",
+        "production": "export NODE_ENV=production && webpack"
+    },
+    "devDependencies": {
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "vue": "^2.6.12",
+        "webpack": "^5.26.3",
+        "webpack-cli": "^4.5.0"
+    }
+}
