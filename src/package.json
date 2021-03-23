@@ -1,13 +1,23 @@
 {
   "private": true,
   "scripts": {
-    "webpack": "webpack --hide-modules --progress",
-    "dev": "webpack --hide-modules --progress --watch"
+    "webpack": "node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --progress",
+    "dev": "node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --watch"
   },
   "devDependencies": {
     "axios": "^0.15.2",
-    "laravel-mix": "^0.3.0",
+    "laravel-mix": "^6.0.13",
+    "postcss": "^8.1",
     "vue": "^2.0.1",
-    "vue-router": "^2.1.1"
+    "vue-loader": "^15.9.5",
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "v8-compile-cache": "^2.3.0"
   }
 }
