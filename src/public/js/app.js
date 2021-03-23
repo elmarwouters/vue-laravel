@@ -1750,13 +1750,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var routes = [{
   path: '/',
-  component: __webpack_require__(/*! ./views/Home.vue */ "./resources/assets/js/views/Home.vue")
+  component: __webpack_require__(/*! ./views/Home.vue */ "./resources/assets/js/views/Home.vue").default
 }, {
   path: '/about',
-  component: __webpack_require__(/*! ./views/About.vue */ "./resources/assets/js/views/About.vue")
+  component: __webpack_require__(/*! ./views/About.vue */ "./resources/assets/js/views/About.vue").default
 }, {
   path: '/contact',
-  component: __webpack_require__(/*! ./views/Contact.vue */ "./resources/assets/js/views/Contact.vue")
+  component: __webpack_require__(/*! ./views/Contact.vue */ "./resources/assets/js/views/Contact.vue").default
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_0__.default({
   routes: routes,
