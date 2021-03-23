@@ -7,12 +7,14 @@
             <p>{{ status.user.name }} said...</p>
 
             <p>
-              {{ postedOn(status) }}
+              {{ status.created_at | ago }}
             </p>
           </div>
 
           <div class="message-body" v-text="status.body"></div>
         </div>
+
+        <add-to-stream @completed="addStatus"></add-to-stream>
       </div>
     </div>
   </div>
@@ -21,19 +23,33 @@
 <script>
 import moment from "moment";
 import Status from "../models/Status";
+import AddToStream from "../components/AddToStream.vue";
 
 export default {
+  components: { AddToStream },
   data() {
     return {
       statuses: [],
     };
   },
+  filters: {
+    ago(date) {
+      return moment(date).fromNow();
+    },
+    capitalize(value) {
+      return value.toUpperCase();
+    },
+  },
   created() {
-    Status.all(statuses => (this.statuses = statuses));
+    Status.all((statuses) => (this.statuses = statuses));
   },
   methods: {
-    postedOn(status) {
-      return moment(status.created_at).fromNow();
+    addStatus(status) {
+      this.statuses.unshift(status);
+
+      alert("Your status has been added to the stream.");
+
+      window.scrollTo(0, 0);
     },
   },
 };
